@@ -1,0 +1,73 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: white;
+}
+
+.italic-georgia {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.genre-button {
+        background-color: #7a124a;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        width: 100%;
+        text-align: center;
+        cursor: pointer;
+      }
+
+.genre-button:hover {
+  background-color: #9d245a;
+}
+
+.genre-wrapper {
+  width: 100%;
+}
+
+/* Sudah ada bagian ini, pastikan hanya satu definisi genre-content */
+.genre-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 0 10px; /* awal padding, jangan besar */
+}
+
+.genre-content.show {
+  max-height: 1000px;
+  padding: 10px; /* padding penuh saat show */
+}
+
+.konten-kanan-scroll {
+  max-height: 80vh; /* misalnya 80% tinggi layar */
+  overflow-y: scroll;
+  overflow-x: hidden; /* jangan sampai konten melebar keluar */
+  transition: max-width 0.3s ease;
+}
+
+
+
+.flex-1 {
+  min-width: 0;
+  width: 100%;
+  flex-grow: 1;
+  min-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-gutter: stable; /* << MAGIC LINE */
+}
+
+
+
+
